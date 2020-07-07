@@ -34,11 +34,37 @@ func main() {
 			fmt.Scanln(&RunTime)
 			fmt.Println("Please input task Size: ")
 			fmt.Scanln(&Size)
-			size(Size)
+			for {
+				if Size < 0 || Size > 64 {
+					fmt.Println("the size of the main store is 64MB")
+					fmt.Println("please input the task Size again:")
+					fmt.Scanln(&Size)
+				} else {
+					break
+				}
+			}
 			fmt.Println("Please input task Tape: ")
 			fmt.Scanln(&Tape)
+			for {
+				if Tape < 0 || Tape > 4 {
+					fmt.Println("the number of the tape is 4")
+					fmt.Println("please input the number of tape again:")
+					fmt.Scanln(&Tape)
+				} else {
+					break
+				}
+			}
 			fmt.Println("Please input task Printer: ")
 			fmt.Scanln(&Printer)
+			for {
+				if Printer < 0 || Printer > 64 {
+					fmt.Println("the number of the printer is 2")
+					fmt.Println("please input the number of printer again:")
+					fmt.Scanln(&Printer)
+				} else {
+					break
+				}
+			}
 
 			files = append(files, file.File{
 				Name:    Name,
@@ -60,18 +86,6 @@ func main() {
 			fmt.Println("input error, please input again")
 			fmt.Scan(&flag)
 			fmt.Println("-----------------")
-		}
-	}
-}
-
-func size(Size int) {
-	for {
-		if Size < 0 || Size > 64 {
-			fmt.Println("the size of the main store is 64MB")
-			fmt.Println("please input the task Size again:")
-			fmt.Scanln(&Size)
-		} else {
-			return
 		}
 	}
 }
