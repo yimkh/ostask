@@ -45,8 +45,6 @@ func Bank(Available []int, Max [][]int, Allocation [][]int, Need [][]int, Reques
 	fmt.Println("Allocation:", Allocation)
 	fmt.Println("Need:", Need)
 	fmt.Println("Available:", Available)
-	fmt.Println("Work:", work)
-	fmt.Println("安全序列：", serial)
 }
 
 //Safe is to check safe
