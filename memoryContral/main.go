@@ -52,6 +52,7 @@ func main() {
 		State: 0,
 	})
 
+	fmt.Println(memoryList)
 	memoryList = firstfit.Add(memoryList, 6, "taskforth")
 	fmt.Println(memoryList)
 	memoryList = firstfit.Delete(memoryList, "taskthird")

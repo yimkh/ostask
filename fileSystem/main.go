@@ -49,7 +49,7 @@ label:
 		switch inputCommand {
 		case "CD":
 			nowNode = command.CD(nowNode, parameter)
-			fmt.Printf("%s+~", nowNode.Name)
+			fmt.Printf("%s+~\n", nowNode.Name)
 		case "CREATE":
 			fmt.Println("please input the size of file")
 			fmt.Scanln(&size)
