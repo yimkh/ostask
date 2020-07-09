@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	control "github.com/yimkh/ostask/indepDevice/contral"
+	control "github.com/yimkh/ostask/indepDevice/control"
 	"github.com/yimkh/ostask/indepDevice/device"
 )
 
