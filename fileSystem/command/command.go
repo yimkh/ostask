@@ -91,7 +91,7 @@ func MD(nowNode dinfo.DirectoryNode, name string) dinfo.DirectoryNode {
 func RD(nowNode dinfo.DirectoryNode, name string) dinfo.DirectoryNode {
 	for i := 0; i < len(nowNode.Dfile.DirectoryNodes); i++ {
 		if nowNode.Dfile.DirectoryNodes[i].Name == name {
-			if nowNode.Dfile.DirectoryNodes[i].Dfile == nil {
+			if nowNode.Dfile.DirectoryNodes[i].Dfile != nil {
 				//remove ........
 				nowNode.Dfile.DirectoryNodes = append(nowNode.Dfile.DirectoryNodes[:i], nowNode.Dfile.DirectoryNodes[i+1:]...)
 
